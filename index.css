@@ -36,8 +36,7 @@ span {
     text-shadow: 0 0 3px black;
 }
 
-.btn:hover,
-.btn:focus {
+.btn:hover {
     box-shadow: 0 0 5px yellow;
 }
 
