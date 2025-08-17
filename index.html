@@ -13,6 +13,10 @@
             <h1 class="title">Generate a <br> <span>random password</span></h1>
             <p class="subtext">Never use an insecure password again.</p>
 
+            <div>
+                <input class="range" type="range" value="10" min="8" max="16" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)">
+                <span id="rangeValue">10</span>
+            </div>
             <button class="btn" id="generate" onclick="generatePass()">Generate Passwords</button>
             <div class="line"></div>
         </div>

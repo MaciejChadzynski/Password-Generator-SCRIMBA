@@ -4,11 +4,13 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 let generateNew = document.getElementById("generate")
 let passOne = document.getElementById("pass-one")
 let passTwo = document.getElementById("pass-two")
+let passLenght = document.getElementById("rangeValue")
 
 function generatePass() {
     let passwordOne = "";
     let passwordTwo = "";
-    for (i = 0; i < 11; i++) {
+    let length = parseInt(passLenght.textContent);
+    for (i = 0; i < length; i++) {
         let randomIndexOne = Math.floor(Math.random() * characters.length);
         let randomIndexTwo = Math.floor(Math.random() * characters.length);
         passwordOne += characters[randomIndexOne]
@@ -17,3 +19,7 @@ function generatePass() {
     passOne.textContent = passwordOne
     passTwo.textContent = passwordTwo
 }
+
+function rangeSlide(value) {
+            document.getElementById('rangeValue').innerHTML = value;
+        }
